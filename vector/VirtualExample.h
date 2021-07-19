@@ -4,18 +4,28 @@
 class VirtualExample
 {
 public:
-	void VirtualFunc()
+	void Func()
 	{
 		std::cout << "부모 클래스" << std::endl;
+	}
+
+	void VirtualFunc()
+	{
+		std::cout << "Virtual 부모 클래스" << std::endl;
 	}
 };
 
 class VirtualExampleSon : public VirtualExample
 {
 public:
-	void VirtualFunc()
+	void Func()
 	{
 		std::cout << "자식 클래스" << std::endl;
+	}
+
+	void VirtualFunc()
+	{
+		std::cout << "Virtual 자식 클래스" << std::endl;
 	}
 };
 

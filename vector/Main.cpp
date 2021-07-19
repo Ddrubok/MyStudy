@@ -8,7 +8,8 @@ int main()
 {
 	VirtualExample* ex = new VirtualExampleSon;
 
-	ex->VirtualFunc();
+	ex->Func();
 
 	return 0;
 }
+
