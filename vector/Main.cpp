@@ -1,10 +1,14 @@
-#include "MyVector.h"
 #include <iostream>
+#include "MyVector.h"
+#include "MyMatrix.h"
+#include "VirtualExample.h"
 
 
 int main()
 {
-	int a = 0;
+	VirtualExample* ex = new VirtualExampleSon;
+
+	ex->VirtualFunc();
 
 	return 0;
 }
