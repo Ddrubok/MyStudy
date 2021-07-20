@@ -4,11 +4,40 @@
 #include "VirtualExample.h"
 
 
+class B;
+class A
+{
+    friend B;
+private:
+    void Func() {
+        std::cout << "A Func" << std::endl;
+    }
+};
+
+class B
+{
+private:
+    A* m_pA;
+
+public:
+    void Func() {
+        m_pA->Func();
+    }
+
+public:
+    B(A& _Other)
+    {
+        m_pA = &_Other;
+    }
+};
+
+
 int main()
 {
-	VirtualExample* ex = new VirtualExampleSon;
+    A aa = A();
+    B bb = B(aa);
 
-	ex->Func();
+    bb.Func();
 
 	return 0;
 }

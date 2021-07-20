@@ -9,7 +9,7 @@ public:
 		std::cout << "부모 클래스" << std::endl;
 	}
 
-	void VirtualFunc()
+	virtual void VirtualFunc()
 	{
 		std::cout << "Virtual 부모 클래스" << std::endl;
 	}
