@@ -4,20 +4,20 @@
 #include "VirtualExample.h"
 
 
-class B;
-class A
+class FriendExampleB;
+class FriendExampleA
 {
-    friend B;
+    friend FriendExampleB;
 private:
     void Func() {
-        std::cout << "A Func" << std::endl;
+        std::cout << "FriendExampleA Func" << std::endl;
     }
 };
 
-class B
+class FriendExampleB
 {
 private:
-    A* m_pA;
+    FriendExampleA* m_pA;
 
 public:
     void Func() {
@@ -25,7 +25,7 @@ public:
     }
 
 public:
-    B(A& _Other)
+    FriendExampleB(FriendExampleA& _Other)
     {
         m_pA = &_Other;
     }
@@ -34,10 +34,10 @@ public:
 
 int main()
 {
-    A aa = A();
-    B bb = B(aa);
+    FriendExampleA FEA = FriendExampleA();
+    FriendExampleB FEB = FriendExampleB(FEA);
 
-    bb.Func();
+    FEB.Func();
 
 	return 0;
 }
