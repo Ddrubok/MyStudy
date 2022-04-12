@@ -37,7 +37,9 @@ int main()
     FriendExampleA FEA = FriendExampleA();
     FriendExampleB FEB = FriendExampleB(FEA);
 
-    FEB.Func();
+    FEB.Func();   
+
+
 
 	return 0;
 }
