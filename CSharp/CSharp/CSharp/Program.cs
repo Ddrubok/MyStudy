@@ -1,17 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CSharp
 {
     class Program
     {
-        //주석 처음부터 다시 하는 느낌 너무 좋같고
-       
         static void Main(string[] args)
         {
-            int hp;
+            Dictionary<int, List<int>> a = new Dictionary<int, List<int>>();
 
-            hp = 100;
-            Console.WriteLine("Hello World! {0}", hp);
+            if (!a.ContainsKey(1))
+                a[1] = new List<int>();
+            a[1].Add(1);
         }
     }
 }
