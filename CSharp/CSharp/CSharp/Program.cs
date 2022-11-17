@@ -5,16 +5,15 @@ namespace CSharp
 {
     class Program
     {
+        static int factorial(int n)
+        {
+            if (n == 0)
+                return 1;
+            return n* factorial((n-1));
+        }
         static void Main(string[] args)
         {
-            for(int i=1;i<=5;i++)
-            {
-                for(int j =1; j<=i;j++)
-                {
-                    Console.Write("*");
-                }
-                Console.WriteLine();
-            }
+            Console.WriteLine(factorial(5)); 
         }
     }
 }
